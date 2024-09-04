@@ -1,0 +1,89 @@
+---
+import RightButton from "./RightButton.astro";
+
+interface Props {
+    z_index: number;
+}
+
+const { z_index } = Astro.props;
+---
+
+<nav style={{zIndex: z_index}}>
+    <a class="left flex items-center gap-2 ">
+        <img src='/recursos/icono/icono.png' alt="Furniro" class="max-w-20"/>
+        <h1>Furniro</h1>
+    </a>
+    <div class="center">
+        <ul class="list">
+            <li><a href="/demo/public">Home</a></li>
+            <li><a href="/demo/public">Shop</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="right">
+        <section class="right-section">
+            <RightButton img_source="/recursos/icono/lupa.png"></RightButton>
+            <RightButton img_source="/recursos/icono/corazon.png"></RightButton>
+            <RightButton img_source="/recursos/icono/carrito.png"></RightButton>
+        </section>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 10px;
+        background-color: #ffffff;
+    }
+
+    .left, .center, .right {
+        flex: 1;
+    }
+
+    .left, .right{
+        margin-inline: 100px;
+    }
+
+    .left h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        font-family: "Lato Black", 'Arial', sans-serif;
+        font-weight: 600;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .list {
+        display: inline-flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .list > *{
+        margin-inline: 8rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .list li {
+        margin-right: 10px;
+    }
+
+    .list li:last-child {
+        margin-right: 0;
+    }
+
+    .right-section {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+
+</style>
