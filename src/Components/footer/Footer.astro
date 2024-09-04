@@ -1,0 +1,167 @@
+---
+interface Props{
+    z_index: number
+}
+
+const { z_index } = Astro.props
+---
+
+<footer style={{zIndex: z_index}}>
+    <div class="line a"/>
+    <section class="business-section">
+        <div class="direction-sect">
+            <h1>Furniro.</h1>
+            <h2>400 University Drive Suite 200 Coral <br> Gables, <br/>FL 33134 USA</h2>
+        </div>
+        <div class="links-sect">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="help-sect">
+            <h2>Help</h2>
+            <ul>
+                <li><a href="#">Payment options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+            </ul>
+        </div>
+        <div class="sigin-sect">
+            <h2>Newsletter</h2>
+            <div>
+                <label>
+                    <input type="email" placeholder="Enter your email address">
+                </label>
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+    <div class="line b"/>
+    <section class="rights-section">
+        <p>2023 Furniro. All rights reserved.</p>
+    </section>
+</footer>
+
+<style>
+
+    .line{
+        height: 1px;
+        background-color: #a4a4a4;
+        margin: 20px 0;
+    }
+
+    .line.a{
+        width: 100%;
+    }
+    .line.b{
+        width: 80%;
+    }
+
+    footer{
+        background-color: white;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+    }
+
+    .business-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 5rem 0;
+    }
+    .business-section h1{
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333;
+    }
+    .business-section h2{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #333;
+        margin-block: 2rem;
+    }
+
+    .links-sect{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .links-sect ul{
+        list-style: none;
+        padding: 0;
+    }
+    .links-sect ul li{
+        margin-bottom: 10px;
+        margin-block: 1rem;
+
+    }
+
+    .help-sect{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .help-sect ul{
+        list-style: none;
+        padding: 0;
+    }
+    .help-sect ul li{
+        margin-bottom: 10px;
+        margin-block: 1rem;
+    }
+
+    .sigin-sect {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .links-sect h2, .help-sect h2, .sigin-sect h2, .rights-section p{
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
+    }
+
+    .sigin-sect h2{
+        margin-left: 1rem;
+    }
+
+    .sigin-sect div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sigin-sect div input{
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 5px;
+        width: 200px;
+        margin-inline: 1rem;
+    }
+    .sigin-sect div button{
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .rights-section{
+        color: #333;
+        display: flex;
+        justify-content: left;
+        text-align: center;
+        padding: 10px 0;
+    }
+</style>
