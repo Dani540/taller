@@ -1,4 +1,9 @@
 ---
+import Nav from "../Components/header/nav/Nav.astro";
+import Header from "../Components/header/Header.astro";
+import Premain from "../Components/premain/Premain.astro";
+import Main from "../Components/main/Main.astro";
+import Footer from "../Components/footer/Footer.astro";
 interface Props {
 	title: string;
 }
@@ -17,6 +22,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Header z_index="3"></Header>
+		<Premain z_index="1"></Premain>
+		<Main z_index="2"></Main>
+		<Footer z_index="3"></Footer>
 		<slot />
 	</body>
 </html>
@@ -31,6 +40,8 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		--subtitle: #fff2e2;
+		--title: #48433c;
 	}
 	html {
 		font-family: system-ui, sans-serif;
