@@ -1,0 +1,53 @@
+[
+  {
+    "img_source": "/recursos/producto-1.png",
+    "title": "Syltherine",
+    "subtitle": "Stylish cafe chair",
+    "price": "2.500.000",
+    "before_pricing": "3.500.000"
+  },
+  {
+    "img_source": "/recursos/producto-2.png",
+    "title": "Leviosa",
+    "subtitle": "Stylish cafe chair",
+    "price": "2.500.000"
+  },
+  {
+    "img_source": "/recursos/producto-3.png",
+    "title": "Lolito",
+    "subtitle": "Luxury big sofa",
+    "price": "7.000.000",
+    "before_pricing": "14.000.000"
+  },
+  {
+    "img_source": "/recursos/producto-4.png",
+    "title": "Respira",
+    "subtitle": "Outdoor bar table and stool",
+    "price": "500.000"
+  },
+  {
+    "img_source": "/recursos/producto-5.png",
+    "title": "Grifo",
+    "subtitle": "Outdoor bar table and stool",
+    "price": "500.000"
+  },
+  {
+    "img_source": "/recursos/producto-6.png",
+    "title": "Muggo",
+    "subtitle": "Small mug",
+    "price": "150.000"
+  },
+  {
+    "img_source": "/recursos/producto-7.png",
+    "title": "Pingky",
+    "subtitle": "Cut bed set",
+    "price": "7.000.000",
+    "before_pricing": "14.000.000"
+  },
+  {
+    "img_source": "/recursos/producto-8.png",
+    "title": "Potty",
+    "subtitle": "Minimalist flower pot",
+    "price": "500.000"
+  }
+]
