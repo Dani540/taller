@@ -1,0 +1,14 @@
+---
+
+import Nav from "./nav/Nav.astro";
+
+interface Props {
+    z_index: number;
+}
+
+const { z_index } = Astro.props;
+---
+
+<header style={{zIndex: z_index}}>
+    <Nav z_index="z_index"></Nav>
+</header>
