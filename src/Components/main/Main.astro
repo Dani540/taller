@@ -1,0 +1,125 @@
+---
+
+import SimpleCard from "./SimpleCard.astro";
+import Card from "./Card.astro";
+import products from '../../../public/recursos/products.json'
+
+interface Props{
+    z_index: number;
+}
+
+const { z_index } = Astro.props
+---
+
+<main style={{zIndex: z_index}}>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <section class="cards-section">
+        <h1>
+            Browse The Range
+        </h1>
+        <div class="simple-cards">
+            <SimpleCard img_source="/recursos/card-1.png" subtitle="Dining" />
+            <SimpleCard img_source="/recursos/card-2.png" subtitle="Living" />
+            <SimpleCard img_source="/recursos/card-3.png" subtitle="Bedroom" />
+        </div>
+    </section>
+    <section class="products-display">
+        <h1>
+            Our Products
+        </h1>
+        <div class="cards">
+            {products.map((product) => (
+                    <Card
+                            img_source={product.img_source}
+                            title={product.title}
+                            subtitle={product.subtitle}
+                            price={product.price}
+                            before_price={product.before_pricing}
+                    />
+            ))}
+        </div>
+        <button>Show More</button>
+    </section>
+</main>
+
+<style>
+    main {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 100%;
+        height: 100%;
+
+        background-color: #ffffff;
+    }
+
+    h2{
+        margin-top: 5rem;
+        margin-bottom: 13rem;
+
+        color: var(--title);
+        font-size: 1.6rem;
+        font-family: "Lato Light", 'Arial', sans-serif;
+        font-weight: 600;
+    }
+
+    .cards-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 80px;
+
+    }
+
+    .cards-section h1 {
+        font-size: 2.5rem;
+        font-family: "Lato Black", 'Arial', sans-serif;
+        font-weight: 600;
+        color: #3a3a3a;
+        background-color: rgba(78, 159, 159, 0.55);
+    }
+
+    .products-display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .products-display h1 {
+        font-size: 2.5rem;
+        font-family: "Lato Black", 'Arial', sans-serif;
+        font-weight: 600;
+        color: #3a3a3a;
+    }
+
+    .simple-cards{
+        display: flex;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .products-display button{
+        border-width: 1.5px;
+        border-color: orange;
+        padding: 1% 6%;
+        text-align: center;
+        color: #856e3c;
+        font-size: larger;
+        font-family: 'Lato Black',serif;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+</style>
