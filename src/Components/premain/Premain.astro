@@ -1,6 +1,6 @@
 ---
 interface Props{
-    z_index: number
+    z_index: string
 }
 
 const { z_index } = Astro.props;
@@ -8,7 +8,7 @@ const { z_index } = Astro.props;
 
 <div class="premain" style={{zIndex: z_index}}>
     <img src="/recursos/background.png" alt="background" class="background">
-    <div class="premain-content" style={{zIndex: z_index-1}}>
+    <div class="premain-content" style={{zIndex: z_index}}>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
     </div>
 </div>
@@ -54,5 +54,4 @@ const { z_index } = Astro.props;
         margin-top: 42rem;
 
     }
-
-
+</style>
